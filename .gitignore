@@ -1,0 +1,86 @@
+# Django
+
+_.log
+_.pot
+\*.pyc
+**pycache**
+db.sqlite3
+media
+
+# Backup files
+
+\*.bak
+
+# Python
+
+_.py[cod]
+_$py.class
+
+# Distribution / packaging
+
+.Python build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+_.egg-info/
+.installed.cfg
+_.egg
+_.manifest
+_.spec
+
+# Installer logs
+
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+
+htmlcov/
+.tox/
+.coverage
+.coverage._
+.cache
+.pytest_cache/
+nosetests.xml
+coverage.xml
+_.cover
+.hypothesis/
+
+# pyenv
+
+.python-version
+
+# Environments
+
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# mkdocs documentation
+
+/site
+
+# mypy
+
+.mypy_cache/
+
+# Visual Studio Code
+
+.vscode/\*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history
