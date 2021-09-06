@@ -1,0 +1,36 @@
+version: "3.3"
+
+volumes:
+  postgres_data:
+    driver: local
+
+services:
+  db:
+    image: postgres:13.4-alpine
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: avanti
+      POSTGRES_USER: tche
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  app:
+    depends_on:
+      - db
+    image: avanti-app
+    ports:
+      - "5000:5000"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: runserver 0.0.0.0:5000
+    volumes:
+      - .:/app
+    environment:
+      DB_USER: tche
+      DB_PASS: postgres
+      DB_NAME: avanti
+      DB_HOST: db
+      DB_PORT: 5432
