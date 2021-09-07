@@ -44,7 +44,7 @@ class CustomUserAdmin(UserAdmin):
         ),
         (
             "Permissões",
-            {"classes": ("grp-collapse grp-open",), "fields": ("is_superuser",)},
+            {"classes": ("grp-collapse grp-open",), "fields": ("is_superuser", "is_staff")},
         ),
         ("Status", {"classes": ("grp-collapse grp-open",), "fields": ("is_active",)}),
     )
@@ -55,7 +55,7 @@ class CustomUserAdmin(UserAdmin):
             "Login",
             {
                 "classes": ("grp-collapse grp-open", "wide"),
-                "fields": ("email", "password1", "password2"),
+                "fields": ("email", "password1", "password2", "nickname", "date_of_birth"),
             },
         ),
     )
