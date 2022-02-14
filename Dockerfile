@@ -14,9 +14,9 @@ COPY requirements.txt /app/
 RUN pip install -r /app/requirements.txt
 ADD . /app/
 
+RUN apk add postgresql-client
 # Django service
 EXPOSE 8000
 
-ENTRYPOINT [ "python", "manage.py" ]
 
 CMD ['runserver', '0.0.0.0:3000']
