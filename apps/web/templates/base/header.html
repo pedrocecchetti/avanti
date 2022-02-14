@@ -1,5 +1,39 @@
-{% extends 'base.html' %} 
+<!-- Header -->
+<div id="header-wrapper">
+    <header id="header" class="container">
 
-{% block header %}
-    
-{% endblock %}
+      <!-- Logo -->
+        <div id="logo">
+          <h1><a href="index.html">Avanti</a></h1>
+          <span>by HTML5 UP</span>
+        </div>
+
+      <!-- Nav -->
+        <nav id="nav">
+          <ul>
+            <li class="{{ header_classes.home }}"><a href="index.html">Welcome</a></li>
+            <li class="{{ header_classes.dropdown }}">
+              <a href="#">Dropdown</a>
+              <ul>
+                <li><a href="#">Lorem ipsum dolor</a></li>
+                <li><a href="#">Magna phasellus</a></li>
+                <li>
+                  <a href="#">Phasellus consequat</a>
+                  <ul>
+                    <li><a href="#">Lorem ipsum dolor</a></li>
+                    <li><a href="#">Phasellus consequat</a></li>
+                    <li><a href="#">Magna phasellus</a></li>
+                    <li><a href="#">Etiam dolore nisl</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Veroeros feugiat</a></li>
+              </ul>
+            </li>
+            <li class="{{ header_classes.left_sidebar }}"><a href="left-sidebar.html">Left Sidebar</a></li>
+            <li class="{{ header_classes.right_sidebar }}"><a href="right-sidebar.html">Right Sidebar</a></li>
+            <li><a href="no-sidebar.html">No Sidebar</a></li>
+          </ul>
+        </nav>
+
+    </header>
+  </div>
