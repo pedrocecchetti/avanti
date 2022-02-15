@@ -1,5 +1,8 @@
+import http
 from django.views.generic import TemplateView
 from django.http import HttpRequest, HttpResponse
+
+from apps.core.models.contact import Contact
 
 
 
@@ -14,5 +17,8 @@ class HomeView(TemplateView):
         return context
 
 def receive_contact_information(request: HttpRequest):
-    print(request.POST['name'])
-    return HttpResponse("OBRIGADO", 202)
+    message = {"message": request.POST['message'], "email": request.POST["email"], "name": request.POST["name"], "subject": request.POST["subject"]}
+    Contact.objects.create(**message)
+    response = HttpResponse("OK")
+    response.status_code = http.HTTPStatus.OK
+    return response
