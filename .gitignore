@@ -71,6 +71,7 @@ venv.bak/
 # mkdocs documentation
 
 /site
+apps/web/static/admin/*
 
 # mypy
 
