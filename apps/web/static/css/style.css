@@ -403,7 +403,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 #hero:before {
   content: "";
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.8);
   position: absolute;
   bottom: 0;
   top: 0;
@@ -426,8 +426,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 #hero h2 {
   color: #555555;
-  margin: 5px 0 30px 0;
-  font-size: 24px;
+  margin: 5px 0 10px 0;
+  font-size: 20px;
   font-weight: 400;
 }
 #hero .btn-get-started {
