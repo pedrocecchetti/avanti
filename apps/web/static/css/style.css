@@ -508,6 +508,14 @@ section {
   background-color: #f6f9fe;
 }
 
+.different-bg {
+  background-color: #c6c9ce;
+}
+
+.another-different-bg {
+  background-color: #6a75839a;
+}
+
 .section-title {
   text-align: center;
   padding-bottom: 30px;
